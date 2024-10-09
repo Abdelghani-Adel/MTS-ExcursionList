@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "image": "/img/trip.jpg",
+    "name": "Discover the Pyramids",
+    "location": "Giza, Egypt",
+    "duration": "1 day",
+    "price": 150,
+    "description": "A guided tour to explore the Great Pyramids of Giza and the Sphinx.",
+    "activities": ["Camel ride", "Pyramid entrance", "Historical explanation"],
+    "rating": 4.8,
+    "availability": ["2024-10-15", "2024-10-16", "2024-10-17"],
+    "guide": {
+      "name": "Ahmed Khalil",
+      "language": "English"
+    }
+  },
+  {
+    "id": 2,
+    "image": "/img/trip.jpg",
+    "name": "Nile River Cruise",
+    "location": "Cairo to Aswan, Egypt",
+    "duration": "7 days",
+    "price": 1200,
+    "description": "Enjoy a luxurious 7-day cruise along the Nile River with stops at key historical sites.",
+    "activities": ["Temple tours", "Luxor and Aswan visits", "Onboard entertainment"],
+    "rating": 4.9,
+    "availability": ["2024-11-01", "2024-11-15", "2024-11-29"],
+    "guide": {
+      "name": "Fatima Mansour",
+      "language": "French"
+    }
+  },
+  {
+    "id": 3,
+    "image": "/img/trip.jpg",
+    "name": "Siwa Oasis Adventure",
+    "location": "Siwa Oasis, Egypt",
+    "duration": "4 days",
+    "price": 600,
+    "description": "Explore the hidden beauty of Siwa Oasis with guided tours of historical and natural sites.",
+    "activities": ["Desert safari", "Salt lakes", "Historical tours"],
+    "rating": 4.7,
+    "availability": ["2024-12-05", "2024-12-10", "2024-12-20"],
+    "guide": {
+      "name": "Mohamed Ezzat",
+      "language": "Arabic, English"
+    }
+  },
+  {
+    "id": 4,
+    "image": "/img/trip.jpg",
+    "name": "Red Sea Diving Experience",
+    "location": "Sharm El-Sheikh, Egypt",
+    "duration": "3 days",
+    "price": 500,
+    "description": "Discover the rich underwater life of the Red Sea in a 3-day diving experience.",
+    "activities": ["Scuba diving", "Snorkeling", "Boat tour"],
+    "rating": 4.8,
+    "availability": ["2024-11-10", "2024-11-20", "2024-12-01"],
+    "guide": {
+      "name": "Omar El-Sayed",
+      "language": "English, French"
+    }
+  },
+  {
+    "id": 5,
+    "image": "/img/trip.jpg",
+    "name": "Mount Sinai Hiking",
+    "location": "South Sinai, Egypt",
+    "duration": "2 days",
+    "price": 300,
+    "description": "A 2-day hiking trip to experience the spiritual significance of Mount Sinai.",
+    "activities": ["Hiking", "St. Catherine's Monastery visit", "Sunrise summit"],
+    "rating": 4.9,
+    "availability": ["2024-11-15", "2024-12-01", "2024-12-10"],
+    "guide": {
+      "name": "Youssef Ibrahim",
+      "language": "Arabic, English"
+    }
+  }
+]
