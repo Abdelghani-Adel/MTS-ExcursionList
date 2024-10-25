@@ -28,7 +28,7 @@ const TripDetailsPage = () => {
 
   useEffect(() => {
     const { pax, name, email, phone } = userDetails;
-    const URL = `http://192.168.30.107:3000/trip-details/1?pax=${pax}&name=${name}&email=${email}&phone=${phone}`;
+    const URL = `https://mts-trips.vercel.app/trip-details/1?pax=${pax}&name=${name}&email=${email}&phone=${phone}`;
     setPaymentURL(URL);
   }, [userDetails]);
 
