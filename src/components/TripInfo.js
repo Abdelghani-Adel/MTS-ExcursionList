@@ -29,7 +29,7 @@ const trip = {
 
 const TripInfo = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-10">
+    <div className="">
       {/* Image */}
       <img src={trip.image} alt={trip.name} className="w-full h-72 object-cover rounded-md mb-6" />
 

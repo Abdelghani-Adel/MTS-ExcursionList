@@ -5,7 +5,7 @@ import { MdOutlineAttachMoney } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const TripCard = ({ trip }) => {
-  const URL = `http://mts-trips.vercel.app/trip-details/${trip.id}`;
+  const URL = `http://192.168.30.107:3000/trip-details/${trip.id}`;
 
   return (
     <div className="rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row relative">

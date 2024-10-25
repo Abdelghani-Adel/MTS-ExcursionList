@@ -1,51 +1,10 @@
-import React, { useEffect, useState } from "react";
-import TripInfo from "../components/TripInfo";
-import UserDetails from "../components/UserDetails";
-import MultiStepForm from "../components/MultiStepForm";
-import { useLocation } from "react-router-dom";
-import PaymentDetailsForm from "../components/PaymentDetailsForm";
+import { useState } from "react";
+import TripInfo from "./TripInfo";
+import UserDetails from "./UserDetails";
+import PaymentDetailsForm from "./PaymentDetailsForm";
 
-const TripDetailsPage = () => {
-  const { search } = useLocation();
+const MultiStepForm = () => {
   const [step, setStep] = useState(1);
-  const [paymentURL, setPaymentURL] = useState("");
-
-  const [userDetails, setUserDetails] = useState({
-    pax: 1,
-    dates: "",
-    name: "",
-    email: "",
-    phone: "",
-  });
-
-  const userDetailsChangeHandler = (e) => {
-    const { name, value } = e.target;
-    setUserDetails((prevDetails) => ({
-      ...prevDetails,
-      [name]: value,
-    }));
-  };
-
-  useEffect(() => {
-    const { pax, name, email, phone } = userDetails;
-    const URL = `http://192.168.30.107:3000/trip-details/1?pax=${pax}&name=${name}&email=${email}&phone=${phone}`;
-    setPaymentURL(URL);
-  }, [userDetails]);
-
-  useEffect(() => {
-    const query = new URLSearchParams(search);
-    const pax = query.get("pax");
-    const name = query.get("name");
-    const email = query.get("email");
-    const phone = query.get("phone");
-
-    if (pax) setUserDetails((prev) => ({ ...prev, pax }));
-    if (name) setUserDetails((prev) => ({ ...prev, name }));
-    if (email) setUserDetails((prev) => ({ ...prev, email }));
-    if (phone) setUserDetails((prev) => ({ ...prev, phone }));
-
-    if (pax | name | phone | email) setStep(3);
-  }, [search]);
 
   const nextStep = () => setStep(step + 1);
   const prevStep = () => setStep(step - 1);
@@ -67,7 +26,7 @@ const TripDetailsPage = () => {
       case 2:
         return (
           <div className="w-full md:max-w-xl mx-auto p-6 bg-white rounded-lg shadow-lg space-y-3">
-            <UserDetails price={500} form={userDetails} onChange={userDetailsChangeHandler} />
+            <UserDetails price={500} />
             <div className="flex space-x-3">
               <button
                 className="px-4 py-2 bg-blue-500 hover:bg-blue-700 transition-all text-white rounded-md w-full"
@@ -87,7 +46,7 @@ const TripDetailsPage = () => {
       case 3:
         return (
           <div className="w-full md:max-w-xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-            <PaymentDetailsForm URL={paymentURL} />
+            <PaymentDetailsForm />
 
             <div className="flex space-x-3">
               <button
@@ -153,4 +112,4 @@ const TripDetailsPage = () => {
   );
 };
 
-export default TripDetailsPage;
+export default MultiStepForm;
